@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Third party css stylesheet -->
+    <link rel="stylesheet" href="./../css/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha512-0S+nbAYis87iX26mmj/+fWt1MmaKCv80H+Mbo+Ne7ES4I6rxswpfnC6PxmLiw33Ywj2ghbtTw0FkLbMWqh4F7Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+
+    <title>Rahib Uzair Ahmed</title>
+</head>
+
+<body>
+    <header>
+        <div class="main-hero-container">
+            <div class="hero-box-behind"></div>
+            <div class="hero-box">
+                <div class="chain-box-style chain-1" id="chain-1"><i class="fas fa-star fa-spin star-icon"></i></div>
+                <div id="chain-2" class="chain-box-style chain-2"><i class="fas fa-star fa-spin star-icon"></i></div>
+                <div class="chain-box-style chain-3"></div>
+                <div class="nav-menu">
+                    <div class="nav-circle-container">
+                        <a href="./resume.html">
+                            <div class="circle-menu-style nav-circle-2"><i class="nav-circle-style fas fa-file"></i>
+                            </div>
+                        </a>
+                        <a href="./contact.html">
+                            <div class="circle-menu-style nav-circle-1"><i class="nav-circle-style far fa-address-book"></i>
+                            </div>
+                        </a>
+                        <a href="./about.html">
+                            <div class="circle-menu-style nav-circle-2"><i class="nav-circle-style fas fa-id-badge"></i>
+                            </div>
+                        </a>
+                        <a href="./../index.html">
+                            <div class="circle-menu-style nav-circle-3"><i class="nav-circle-style fas fa-home"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-text">
+                    <div class="name-style">CONTACT ME</div>
+                    <div class="small-description">"Let's get in touch and create something awesome together."</div>
+                    <div id="form-desktop" class="desktop-form"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form id="form-mobile" class="contact-form">
+            <label class="label-field"><span>Name</span></label>
+            <input class="input-style" type="text" />
+            <label class="label-field"><span>Email</span></label>
+            <input class="input-style" type="text" />
+            <label class="label-field"><span>Description</span></label>
+            <textarea rows="4" class="input-style"></textarea>
+            <button class="submit-button" type="submit">Contact</button>
+        </form>
+    </main>
+    <footer>
+        Rahib Uzair Ahmed &reg; 2023 Copyrights. All rights reserved
+    </footer>
+    <script>
+        // Get the chain-1 element
+        const chain1 = document.getElementById('chain-1');
+        // Get all circle-menu-style elements
+        const navCircles = document.querySelectorAll('.circle-menu-style');
+
+        // set initial state to false for circle visibility
+        let isMenuVisible = true;
+
+        // Add click event listener to chain-1
+        chain1.addEventListener('click', () => {
+            if (isMenuVisible) {
+                console.log('inside is visible', isMenuVisible)
+                // apply the hide circle animation if they are visible and chain1 is clicked
+                navCircles.forEach(circle => {
+                    circle.style.animation = 'circle-hide-animation 1s ease-in-out forwards';
+                });
+                // set state to false
+                isMenuVisible = false;
+            } else {
+                // apply the show animation if circle are hidden and update the state to true
+                navCircles.forEach(circle => {
+                    circle.style.animation = 'circle-show-animation 1s ease-in';
+                });
+                isMenuVisible = true;
+            }
+        });
+    </script>
+    <script>
+        const formMobile = document.getElementById('form-mobile')
+        const formDesktop = document.getElementById('form-desktop')
+        if (window.innerWidth >= 768) {
+            formDesktop.innerHTML = formMobile.outerHTML
+            formMobile.style.display = 'none'
+
+        } else {
+            formDesktop.style.display = 'none'
+            formMobile.style.display = 'flex'
+        }
+    </script>
+</body>
+
+</html>

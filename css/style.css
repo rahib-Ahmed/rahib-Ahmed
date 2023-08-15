@@ -1,0 +1,45 @@
+@font-face {
+    font-family: jost;
+    src: url(../utils/font-family/Jost-VariableFont_wght.ttf);
+}
+
+:root {
+    --primary-color: #DCCAB2;
+    --secondary-color: #282D33;
+    color: var(--primary-color);
+    font-family: jost, sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    min-height: calc(100vh - 60px);
+}
+
+header {
+    padding: 10px;
+}
+
+main {
+    min-height: 90vh;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: Jost, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: underline; /* no underline */
+}
+
+.image-in-box {
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    object-fit: cover;
+}
