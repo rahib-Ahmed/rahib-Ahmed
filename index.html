@@ -26,7 +26,7 @@
                 <div class="hero-box-behind"></div>
                 <div class="hero-box">
                     <div class="image-container me-image-container">
-                        <img alt="me myself and i" class="hero-image" src="https://media0.giphy.com/media/tPzuDa62ovAI/giphy.gif?cid=ecf05e47mhwiq5djnrhmm6300yra31cblqwyl2znlclop9e2&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
+                        <img alt="Totoro waving at you" class="hero-image" src="https://media0.giphy.com/media/tPzuDa62ovAI/giphy.gif?cid=ecf05e47mhwiq5djnrhmm6300yra31cblqwyl2znlclop9e2&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
                     </div>
                     <div class="chain-box-style chain-1" id="chain-1"><i class="fas fa-star fa-spin star-icon"></i>
                     </div>
@@ -108,6 +108,10 @@
                     <div id="skill-card-4" class="skill-card">
                         <span class="skill-number">04</span>
                         <div class="skill-name">Video Editor</div>
+                    </div>
+                    <div id="skill-card-5" class="skill-card">
+                        <span class="skill-number">05</span>
+                        <div class="skill-name">Miscellaneous</div>
                     </div>
                 </div>
                 <div id="skill-set-1-container" class="skill-set-1-container">
@@ -237,11 +241,13 @@
         const skillSet2 = document.getElementById('skill-set-2-container');
         const skillSet3 = document.getElementById('skill-set-3-container');
         const skillSet4 = document.getElementById('skill-set-4-container');
+        const skillSet5 = document.getElementById('skill-set-5-container');
 
         const skill1 = document.getElementById('skill-card-1');
         const skill2 = document.getElementById('skill-card-2');
         const skill3 = document.getElementById('skill-card-3');
         const skill4 = document.getElementById('skill-card-4');
+        const skill5 = document.getElementById('skill-card-5');
 
         skill1.addEventListener('click', () => {
             heading.textContent = skill1.textContent;
@@ -266,6 +272,12 @@
             backButton4.innerHTML = "<i id='goBack4' style='font-size: 2em;' class='fas fa-chevron-left'></i>"
             containerSkill.style.display = 'none';
             skillSet4.style.display = 'flex';
+        })
+        skill5.addEventListener('click', () => {
+            heading.textContent = skill5.textContent
+            backButton4.innerHTML = "<i id='goBack4' style='font-size: 2em;' class='fas fa-chevron-left'></i>"
+            containerSkill.style.display = 'none';
+            skillSet5.style.display = 'flex';
         })
 
     </script>

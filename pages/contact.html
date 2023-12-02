@@ -56,14 +56,14 @@
         </div>
     </header>
     <main>
-        <form id="form-mobile" class="contact-form">
+        <form id="form-mobile" class="contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvojjngk" method="post">
             <label class="label-field"><span>Name</span></label>
-            <input class="input-style" type="text" />
+            <input class="input-style" type="text" name="name" id="name" />
             <label class="label-field"><span>Email</span></label>
-            <input class="input-style" type="text" />
-            <label class="label-field"><span>Description</span></label>
-            <textarea rows="4" class="input-style"></textarea>
-            <button class="submit-button" type="submit">Contact</button>
+            <input class="input-style" type="text" name="email" id="email" />
+            <label class="label-field"><span>Message</span></label>
+            <textarea rows="4" class="input-style" name="message" id="message"></textarea>
+            <input class="submit-button" type="submit" value="Submit">
         </form>
     </main>
     <footer>

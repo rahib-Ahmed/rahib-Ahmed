@@ -268,7 +268,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: flex-start;
-    transform: rotate(-90deg);
+    /* transform: rotate(-90deg); */
     padding: 1em;
     gap: 2.8em;
     transition: all 1s;
