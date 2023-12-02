@@ -31,6 +31,15 @@
     position: relative;
 }
 
+.scroll-to-next {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    cursor: pointer;
+    font-size: 2rem;
+    animation: pulse-animation 3s ease-in;
+}
+
 .image-container {
     position: absolute;
     height: inherit;
@@ -144,17 +153,47 @@
 }
 
 .nav-circle-1 {
-    animation: circle-animation 1s linear forwards 3s;
+    animation: circle-animation 0.7s linear forwards 1s;
     /* set it when done with the whole part */
 }
 .nav-circle-2 {
-    animation: circle-animation 1s linear forwards 2s;
+    animation: circle-animation 0.7s linear forwards 1.5s;
     /* set it when done with the whole part */
 }
 
 .nav-circle-3 {
-    animation: circle-animation 1s linear forwards 1s;
+    animation: circle-animation 0.7s linear forwards 2s;
     /* set it when done with the whole part */
+}
+
+.nav-circle-4 {
+    animation: circle-animation 0.7s linear forwards 2.5s;
+    /* set it when done with the whole part */
+}
+
+.nav-circle-4:hover::after {
+    content: "Resume";
+    position: absolute;
+    bottom: -25px;
+    width: max-content;
+}
+.nav-circle-3:hover::after {
+    content: "Contact";
+    position: absolute;
+    bottom: -25px;
+    width: max-content;
+}
+.nav-circle-2:hover::after {
+    content: "About Me";
+    position: absolute;
+    bottom: -25px;
+    width: max-content;
+}
+.nav-circle-1:hover::after {
+    content: "Home";
+    position: absolute;
+    bottom: -25px;
+    width: max-content;
 }
 
 .nav-circle-container {
@@ -461,10 +500,44 @@
     }
 }
 
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+        transition: all 2s ease-in;
+    }
+    
+    33% {
+        transform: scale(1.4);
+        transition: all 2s ease-out;
+    }
+    
+    66% {
+        transform: scale(1);
+        transition: all 2s ease-out;
+    }
+    
+    100% {
+        transform: scale(1.4);
+        transition: all 2s ease-in;
+    }
+}
+
+.hide-in-mobile {
+    display: none !important;
+}
+
+.rahib-ahmed {
+    margin-bottom: 0 !important;
+}
+
 /* for the screen size 480px and larger*/
 @media screen and (min-width: 30em) {
     .main-hero-container {
         height: 400px;
+    }
+
+    .hide-in-mobile {
+        display: inline;
     }
 
     .hero-box-behind {
@@ -508,20 +581,34 @@
 }
 
 @media screen and (min-width: 580px) {
+    .hide-in-mobile {
+        display: inline !important;
+    }
+    .rahib-ahmed {
+        margin-bottom: 3rem !important;
+    }
     .nav-circle-style {
         font-size: 2em;
     }
     .nav-circle-1 {
         height: 3em !important;
         width: 3em !important;
+        opacity: 0;
     }
     .nav-circle-2 {
         height: 3em !important;
         width: 3em !important;
+        opacity: 0;
     }
     .nav-circle-3 {
         height: 3em !important;
         width: 3em !important;
+        opacity: 0;
+    }
+    .nav-circle-4 {
+        height: 3em !important;
+        width: 3em !important;
+        opacity: 0;
     }
     .nav-circle-container {
         gap: 2em;
@@ -576,14 +663,22 @@
     .nav-circle-1 {
         height: 4em !important;
         width: 4em !important;
+        opacity: 0;
     }
     .nav-circle-2 {
         height: 4em !important;
         width: 4em !important;
+        opacity: 0;
     }
     .nav-circle-3 {
         height: 4em !important;
         width: 4em !important;
+        opacity: 0;
+    }
+    .nav-circle-4 {
+        height: 4em !important;
+        width: 4em !important;
+        opacity: 0;
     }
     .nav-circle-container {
         gap: 2em;
@@ -622,14 +717,22 @@
     .nav-circle-1 {
         height: 4em !important;
         width: 4em !important;
+        opacity: 0;
     }
     .nav-circle-2 {
         height: 4em !important;
         width: 4em !important;
+        opacity: 0;
     }
     .nav-circle-3 {
         height: 4em !important;
         width: 4em !important;
+        opacity: 0;
+    }
+    .nav-circle-4 {
+        height: 4em !important;
+        width: 4em !important;
+        opacity: 0;
     }
     .nav-circle-container {
         gap: 2.5em;

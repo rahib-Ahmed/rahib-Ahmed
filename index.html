@@ -36,11 +36,11 @@
                     <div class="nav-menu">
                         <div class="nav-circle-container">
                             <a href="./pages/resume.html">
-                                <div class="circle-menu-style nav-circle-2"><i class="nav-circle-style fas fa-file"></i>
+                                <div class="circle-menu-style nav-circle-4"><i class="nav-circle-style fas fa-file"></i>
                                 </div>
                             </a>
                             <a href="./pages/contact.html">
-                                <div class="circle-menu-style nav-circle-1"><i class="nav-circle-style far fa-address-book"></i>
+                                <div class="circle-menu-style nav-circle-3"><i class="nav-circle-style far fa-address-book"></i>
                                 </div>
                             </a>
                             <a href="./pages/about.html">
@@ -48,7 +48,7 @@
                                         class="nav-circle-style fas fa-id-badge"></i></div>
                             </a>
                             <a href="./index.html">
-                                <div class="circle-menu-style nav-circle-3"><i class="nav-circle-style fas fa-home"></i>
+                                <div class="circle-menu-style nav-circle-1"><i class="nav-circle-style fas fa-home"></i>
                                 </div>
                             </a>
                         </div>
@@ -59,8 +59,8 @@
                         <div id="small-descriptions" class="small-description"></div>
                     </div>
                     <div class="connect">
-                        <div style="margin-bottom: 3rem; text-align: center;" class="name-style">I'M RAHIB AHMED</div>
-                        <div class="name-style">Let's connect</div>
+                        <div style="margin-bottom: 3rem; text-align: center;" class="name-style rahib-ahmed">I'M RAHIB AHMED</div>
+                        <div class="name-style hide-in-mobile">Let's connect</div>
                         <div class="platform-container">
                             <ul class="social-links-container"
                                 style="display: flex; gap: 0.5em; flex-direction: column; flex-basis: 100%; padding: 1em;">
@@ -85,8 +85,11 @@
                     </div>
                 </div>
             </div>
+            <div class="scroll-to-next hide-in-mobile" id="scroll-to-main-content">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </header>
-        <main>
+        <main id="main-skill-content">
             <div class="skill-set-container">
                 <h2 id="skill-heading" class="skill-title">What Skill I have for you</h2>
                 <div id="skill-container" class="skill-container">
@@ -141,17 +144,30 @@
 
         // Add click event listener to chain-1
         chain1.addEventListener('click', () => {
+            let hiding_circle;
             if (isMenuVisible) {
                 // apply the hide circle animation if they are visible and chain1 is clicked
-                navCircles.forEach(circle => {
-                    circle.style.animation = 'circle-hide-animation 1s ease-in-out forwards';
-                });
+                
+                const hidingPromises = navCircles.forEach(circle => {
+                    return new Promise((resolve, reject) => {
+                        circle.style.animation = 'circle-hide-animation 1s ease-in-out forwards';
+                        
+                        // Using 'animationend' event to resolve the promise when the animation ends
+                        circle.addEventListener('animationend', () => {
+                        resolve(circle);
+                    }, { once: true }); // Adding the event listener to fire only once
+                    }).then(circle => {
+                        circle.style.display = 'none';
+                    });
+                    });
                 // set state to false
                 isMenuVisible = false;
             } else {
                 // apply the show animation if circle are hidden and update the state to true
                 navCircles.forEach(circle => {
                     circle.style.animation = 'circle-show-animation 1s ease-in';
+                    circle.style.opacity = '1';
+                    circle.style.display = 'flex';
                 });
                 isMenuVisible = true;
             }
@@ -267,6 +283,13 @@
         backButton4.addEventListener('click', () => {
             location.reload()
         })
+    </script>
+    <script>
+       const chevronScroll = document.getElementById('scroll-to-main-content')
+       chevronScroll.addEventListener('click', () => {
+        const scrollToContent = document.getElementById('main-skill-content')
+        scrollToContent.scrollIntoView({ behavior: 'smooth' });
+       })
     </script>
     <script src="./js/loadContent.js"></script>
 </body>
