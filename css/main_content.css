@@ -120,6 +120,7 @@
 }
 
 .chain-3 {
+    display: none;
     bottom: 20%;
     right: -5px;
     height: 3.4em;
@@ -566,7 +567,6 @@
     }
 
     .chain-1 {
-        display: flex;
         right: 15%;
         height: 6.2em;
         width: 2.5em;
@@ -705,6 +705,7 @@
     }
 
     .chain-3 {
+        display: flex;
         height: 6.2em;
         width: 2.5em;
     }
@@ -777,6 +778,7 @@
     }
 
     .chain-3 {
+        display: flex;
         height: 7.2em;
         width: 3.5em;
     }
