@@ -24,7 +24,7 @@
 
         <header>
             <div class="nav-menu">
-                <div class="main-hero-container">
+                <div id="main-hero" class="main-hero-container">
                     <div class="hero-box-behind"></div>
                     <div class="hero-box">
                         <div class="image-container me-image-container">
@@ -35,7 +35,9 @@
                         </div>
                         <div id="chain-2" class="chain-box-style chain-2"><i class="fas fa-star fa-spin star-icon"></i>
                         </div>
-                        <div class="chain-box-style chain-3"></div>
+                        <div id="chain-3" class="chain-box-style chain-3">
+                            <i id="arrow-scroll-to-next" class="scroll-to-next fas fa-chevron-down"></i>
+                        </div>
                         <div class="nav-menu">
                             <div class="nav-circle-container">
                                 <a target="_blank" href="./images/rahibAhmedResume.pdf">
@@ -92,9 +94,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="scroll-to-next hide-in-mobile" id="scroll-to-main-content">
-                    <i class="fas fa-chevron-down"></i>
                 </div>
         </header>
         <main id="main-skill-content">
@@ -305,11 +304,21 @@
         })
     </script>
     <script>
-        const chevronScroll = document.getElementById('scroll-to-main-content')
+        const chevronScroll = document.getElementById('chain-3');
+        const scrollToNext = document.getElementById('arrow-scroll-to-next');
+        const scrollToContent = document.getElementById('main-skill-content')
+        const scrollToHeader = document.getElementById('main-hero')
         chevronScroll.addEventListener('click', () => {
-            const scrollToContent = document.getElementById('main-skill-content')
-            scrollToContent.scrollIntoView({ behavior: 'smooth' });
-        })
+            if (scrollToNext.classList.contains('fa-chevron-down')) {
+                scrollToContent.scrollIntoView({ behavior: 'smooth' });
+                scrollToNext.classList.remove('fa-chevron-down');
+                scrollToNext.classList.add('fa-chevron-up');
+            } else {
+                scrollToHeader.scrollIntoView({ behavior: 'smooth' });
+                scrollToNext.classList.remove('fa-chevron-up');
+                scrollToNext.classList.add('fa-chevron-down');
+            }
+        });
     </script>
     <script src="./js/loadContent.js"></script>
 </body>

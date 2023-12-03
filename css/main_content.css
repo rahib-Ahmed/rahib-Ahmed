@@ -35,12 +35,11 @@
 }
 
 .scroll-to-next {
-    position: absolute;
-    bottom: -10px;
-    right: calc(50% - 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-size: 2rem;
-    animation: pulse-animation 3s ease-in;
 }
 
 .image-container {
@@ -121,11 +120,12 @@
 
 .chain-3 {
     display: none;
-    bottom: 20%;
-    right: -5px;
-    height: 3.4em;
-    width: 1.5em;
-    transform: rotate(-90deg);
+    bottom: -42px;
+    right: calc((95vw - 4.5em)/2);
+    height: 4.2em !important;
+    width: 4.5em !important;
+    transform: rotate(0deg);
+    cursor: pointer;
 }
 
 .nav-menu {
@@ -601,10 +601,6 @@
         font-size: 1.6em;
     }
 
-    .nav-circle-container {
-        gap: 1em;
-        right: 20%;
-    }
 }
 
 @media screen and (min-width: 580px) {
@@ -612,28 +608,7 @@
         display: inline !important;
     }
 
-    .nav-circle-4::after,
-    .nav-circle-3::after,
-    .nav-circle-2::after,
-    .nav-circle-1::after {
-        content: "";
-    }
 
-    .nav-circle-4:hover::after {
-        content: "Resume";
-    }
-
-    .nav-circle-3:hover::after {
-        content: "Contact Me";
-    }
-
-    .nav-circle-2:hover::after {
-        content: "About Me";
-    }
-
-    .nav-circle-1:hover::after {
-        content: "Home";
-    }
 
     .rahib-ahmed {
         margin-bottom: 3rem !important;
@@ -678,6 +653,29 @@
 @media screen and (min-width: 48em) {
     .main-hero-container {
         height: 95vh;
+    }
+
+    .nav-circle-4::after,
+    .nav-circle-3::after,
+    .nav-circle-2::after,
+    .nav-circle-1::after {
+        content: "";
+    }
+
+    .nav-circle-4:hover::after {
+        content: "Resume";
+    }
+
+    .nav-circle-3:hover::after {
+        content: "Contact Me";
+    }
+
+    .nav-circle-2:hover::after {
+        content: "About Me";
+    }
+
+    .nav-circle-1:hover::after {
+        content: "Home";
     }
 
     .hero-box-behind {
