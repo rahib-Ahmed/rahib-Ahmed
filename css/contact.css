@@ -213,7 +213,7 @@ main {
     flex-direction: column;
     gap: 1em;
     padding: 1em;
-    max-width: 50%;
+    max-width: 90%;
     justify-content: center;
 }
 
@@ -341,6 +341,9 @@ main {
 @media screen and (min-width: 580px) {
     .nav-circle-style {
         font-size: 2em;
+    }
+    .contact-form {
+        max-width: 50%;
     }
     .nav-circle-1 {
         height: 3em !important;

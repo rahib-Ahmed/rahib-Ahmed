@@ -28,12 +28,13 @@
                 <div class="chain-box-style chain-3"></div>
                 <div class="nav-menu">
                     <div class="nav-circle-container">
-                        <a href="./resume.html">
+                        <a target="_blank" href="./../images/rahibAhmedResume.pdf">
                             <div class="circle-menu-style nav-circle-4"><i class="nav-circle-style fas fa-file"></i>
                             </div>
                         </a>
                         <a href="./contact.html">
-                            <div class="circle-menu-style nav-circle-3"><i class="nav-circle-style far fa-address-book"></i>
+                            <div class="circle-menu-style nav-circle-3"><i
+                                    class="nav-circle-style far fa-address-book"></i>
                             </div>
                         </a>
                         <a href="./about.html">
@@ -51,7 +52,10 @@
                     <div class="name-style">ABOUT ME AND RANDOM STUFF</div>
                     <div class="small-description">"A computer nerd turned data analyst turned designer in the making"
                     </div>
-                    <p class="about-me-description">Hey there, I'm Rahib, the multi-hat-wearing dynamo in the world of tech! I'm a developer,
+                    <p id="desc-desktop" class="about-me-description">
+                        Hey there, I'm Rahib, the multi-hat-wearing dynamo
+                        in the world of
+                        tech! I'm a developer,
                         analyst, designer, photographer, and video editor—yeah, I've got more hats than a magician's
                         rabbit! My main gig? I'm a developer and designer extraordinaire, tackling the digital landscape
                         as a full-stack sorcerer in the realm of health and medical research. I'm all about diving
@@ -62,6 +66,9 @@
         </div>
     </header>
     <main>
+        <div id="desc-mobile">
+
+        </div>
         <div class="tab-container">
             <div id="achievements" class="tab-container-active">Achievements</div>
             <div id="project">Project(s)</div>
@@ -157,15 +164,15 @@
                 const hidingPromises = navCircles.forEach(circle => {
                     return new Promise((resolve, reject) => {
                         circle.style.animation = 'circle-hide-animation 1s ease-in-out forwards';
-                        
+
                         // Using 'animationend' event to resolve the promise when the animation ends
                         circle.addEventListener('animationend', () => {
-                        resolve(circle);
-                    }, { once: true }); // Adding the event listener to fire only once
+                            resolve(circle);
+                        }, { once: true }); // Adding the event listener to fire only once
                     }).then(circle => {
                         circle.style.display = 'none';
                     });
-                    });
+                });
                 // set state to false
                 isMenuVisible = false;
             } else {
@@ -226,6 +233,18 @@
             catsId.classList.add('tab-container-active')
         })
 
+    </script>
+    <script>
+        const descMobile = document.getElementById('desc-mobile')
+        const descDesktop = document.getElementById('desc-desktop')
+        if (window.innerWidth >= 768) {
+            descMobile.style.display = 'none'
+
+        } else {
+            descMobile.innerHTML = descDesktop.outerHTML
+            descDesktop.style.display = 'none'
+            descMobile.style.display = 'flex'
+        }
     </script>
 </body>
 
