@@ -33,8 +33,10 @@ footer {
 }
 
 a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: underline; /* no underline */
+    color: inherit;
+    /* blue colors for links too */
+    text-decoration: underline;
+    /* no underline */
 }
 
 .image-in-box {

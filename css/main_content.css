@@ -9,6 +9,7 @@
 }
 
 .hero-box-behind {
+    display: none;
     position: absolute;
     border-radius: 15px;
     background-color: var(--primary-color);
@@ -17,6 +18,7 @@
     width: 40%;
     z-index: 1;
     overflow: hidden;
+    margin-top: 1.5rem;
 }
 
 .hero-box {
@@ -29,12 +31,13 @@
     z-index: 2;
     border-radius: 15px;
     position: relative;
+    margin-top: 1.5rem;
 }
 
 .scroll-to-next {
     position: absolute;
     bottom: 20px;
-    right: 50%;
+    right: calc(50% - 1rem);
     cursor: pointer;
     font-size: 2rem;
     animation: pulse-animation 3s ease-in;
@@ -81,6 +84,7 @@
 }
 
 .chain-1 {
+    display: none;
     top: -10px;
     right: 20%;
     height: 4.2em;
@@ -95,7 +99,7 @@
     background-color: var(--secondary-color);
 }
 
-.chain-1:hover .star-icon{
+.chain-1:hover .star-icon {
     color: var(--primary-color);
 }
 
@@ -111,7 +115,7 @@
     background-color: var(--secondary-color);
 }
 
-.chain-2:hover .star-icon{
+.chain-2:hover .star-icon {
     color: var(--primary-color);
 }
 
@@ -146,6 +150,7 @@
     transition: all 0.5s;
     position: relative;
 }
+
 /* transition the height and width with 0.5s */
 .circle-menu-style:hover {
     height: 3.5em;
@@ -156,6 +161,7 @@
     animation: circle-animation 0.7s linear forwards 1s;
     /* set it when done with the whole part */
 }
+
 .nav-circle-2 {
     animation: circle-animation 0.7s linear forwards 1.5s;
     /* set it when done with the whole part */
@@ -171,25 +177,28 @@
     /* set it when done with the whole part */
 }
 
-.nav-circle-4:hover::after {
+.nav-circle-4::after {
     content: "Resume";
     position: absolute;
     bottom: -25px;
     width: max-content;
 }
-.nav-circle-3:hover::after {
+
+.nav-circle-3::after {
     content: "Contact";
     position: absolute;
     bottom: -25px;
     width: max-content;
 }
-.nav-circle-2:hover::after {
+
+.nav-circle-2::after {
     content: "About Me";
     position: absolute;
     bottom: -25px;
     width: max-content;
 }
-.nav-circle-1:hover::after {
+
+.nav-circle-1::after {
     content: "Home";
     position: absolute;
     bottom: -25px;
@@ -198,11 +207,12 @@
 
 .nav-circle-container {
     display: flex;
-    gap: 1em;
+    gap: 2em;
     flex-direction: row;
     position: absolute;
-    right: 30%;
+    right: 15%;
     z-index: 999;
+    top: -2.1rem;
 }
 
 .abstract-box-container {
@@ -239,8 +249,8 @@
     height: 6em;
     width: 15em;
     border-radius: 15px;
-    background: rgb(157,145,138);
-    background: linear-gradient(8deg, rgba(157,145,138,1) 0%, rgba(178,168,160,1) 44%, rgba(187,177,169,1) 88%, rgba(220,202,178,1) 100%);
+    background: rgb(157, 145, 138);
+    background: linear-gradient(8deg, rgba(157, 145, 138, 1) 0%, rgba(178, 168, 160, 1) 44%, rgba(187, 177, 169, 1) 88%, rgba(220, 202, 178, 1) 100%);
     box-shadow: 0px 0px 10px 0px var(--primary-color);
 }
 
@@ -255,7 +265,8 @@
 .skill-title {
     font-size: 1.6em;
     font-weight: bolder;
-    transition: opacity 0.5s ease-in-out;;
+    transition: opacity 0.5s ease-in-out;
+    ;
 }
 
 .fade-in {
@@ -302,7 +313,7 @@
 }
 
 .nav-circle-style {
-    color: #282D33; 
+    color: #282D33;
     font-size: 1.5em;
 }
 
@@ -456,6 +467,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -505,17 +517,17 @@
         transform: scale(1);
         transition: all 2s ease-in;
     }
-    
+
     33% {
         transform: scale(1.4);
         transition: all 2s ease-out;
     }
-    
+
     66% {
         transform: scale(1);
         transition: all 2s ease-out;
     }
-    
+
     100% {
         transform: scale(1.4);
         transition: all 2s ease-in;
@@ -528,6 +540,7 @@
 
 .rahib-ahmed {
     margin-bottom: 0 !important;
+    font-size: 1.4rem !important;
 }
 
 /* for the screen size 480px and larger*/
@@ -541,15 +554,19 @@
     }
 
     .hero-box-behind {
+        display: flex;
         height: 350px;
         width: 30%;
+        margin-top: 0;
     }
 
     .hero-box {
         height: 325px;
+        margin-top: 0;
     }
 
     .chain-1 {
+        display: flex;
         right: 15%;
         height: 6.2em;
         width: 2.5em;
@@ -564,19 +581,28 @@
         height: 6.2em;
         width: 2.5em;
     }
+
     .star-icon {
         font-size: 1.5em;
     }
+
     .skill-container {
         flex-direction: row;
         transform: rotate(0deg);
         transition: all 1s;
     }
+
     .skill-card {
         flex-basis: calc(100% / 2 - 10px);
     }
+
     .small-description {
         font-size: 1.6em;
+    }
+
+    .nav-circle-container {
+        gap: 1em;
+        right: 20%;
     }
 }
 
@@ -584,32 +610,63 @@
     .hide-in-mobile {
         display: inline !important;
     }
+
+    .nav-circle-4::after,
+    .nav-circle-3::after,
+    .nav-circle-2::after,
+    .nav-circle-1::after {
+        content: "";
+    }
+
+    .nav-circle-4:hover::after {
+        content: "Resume";
+    }
+
+    .nav-circle-3:hover::after {
+        content: "Contact Me";
+    }
+
+    .nav-circle-2:hover::after {
+        content: "About Me";
+    }
+
+    .nav-circle-1:hover::after {
+        content: "Home";
+    }
+
     .rahib-ahmed {
         margin-bottom: 3rem !important;
+        font-size: 2rem !important;
     }
+
     .nav-circle-style {
         font-size: 2em;
     }
+
     .nav-circle-1 {
         height: 3em !important;
         width: 3em !important;
         opacity: 0;
     }
+
     .nav-circle-2 {
         height: 3em !important;
         width: 3em !important;
         opacity: 0;
     }
+
     .nav-circle-3 {
         height: 3em !important;
         width: 3em !important;
         opacity: 0;
     }
+
     .nav-circle-4 {
         height: 3em !important;
         width: 3em !important;
         opacity: 0;
     }
+
     .nav-circle-container {
         gap: 2em;
         right: 25%;
@@ -623,15 +680,19 @@
     }
 
     .hero-box-behind {
+        display: flex;
         height: 90vh;
         width: 30%;
+        margin-top: 0;
     }
 
     .hero-box {
         height: 85vh;
+        margin-top: 0;
     }
 
     .chain-1 {
+        display: flex;
         right: 15%;
         height: 6.2em;
         width: 2.5em;
@@ -647,44 +708,54 @@
         height: 6.2em;
         width: 2.5em;
     }
+
     .star-icon {
         font-size: 2em;
     }
+
     .abstract-box-container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, auto);
     }
+
     .small-description {
         font-size: 2em;
     }
+
     .nav-circle-style {
         font-size: 2.5em;
     }
+
     .nav-circle-1 {
         height: 4em !important;
         width: 4em !important;
         opacity: 0;
     }
+
     .nav-circle-2 {
         height: 4em !important;
         width: 4em !important;
         opacity: 0;
     }
+
     .nav-circle-3 {
         height: 4em !important;
         width: 4em !important;
         opacity: 0;
     }
+
     .nav-circle-4 {
         height: 4em !important;
         width: 4em !important;
         opacity: 0;
     }
+
     .nav-circle-container {
         gap: 2em;
         top: 10%;
         right: 25%;
     }
+
     .platform-list span {
         font-size: 2em;
         font-weight: bold;
@@ -694,6 +765,7 @@
 /* for the screen size 960px and larger*/
 @media screen and (min-width: 60em) {
     .chain-1 {
+        display: flex;
         right: 15%;
         height: 7.2em;
         width: 3.5em;
@@ -708,69 +780,83 @@
         height: 7.2em;
         width: 3.5em;
     }
+
     .star-icon {
         font-size: 2.2em;
     }
+
     .nav-circle-style {
         font-size: 2.5em;
     }
+
     .nav-circle-1 {
         height: 4em !important;
         width: 4em !important;
         opacity: 0;
     }
+
     .nav-circle-2 {
         height: 4em !important;
         width: 4em !important;
         opacity: 0;
     }
+
     .nav-circle-3 {
         height: 4em !important;
         width: 4em !important;
         opacity: 0;
     }
+
     .nav-circle-4 {
         height: 4em !important;
         width: 4em !important;
         opacity: 0;
     }
+
     .nav-circle-container {
         gap: 2.5em;
         top: 10%;
         right: 20%;
     }
+
     .video-right-container {
         display: flex;
         flex-direction: row;
         text-align: right;
     }
-    
+
     .video-left-container {
         display: flex;
         flex-direction: row-reverse;
     }
+
     .video-right-container-icon-alignment {
         display: flex;
         font-weight: bolder;
         justify-content: flex-end;
     }
+
     .order-1-with-padding {
         order: 2;
-    
+
     }
+
     .order-2-with-padding {
         order: 1;
         padding-right: 1em;
     }
+
     .text-wrap-property {
         inline-size: 80%;
         overflow-wrap: break-word;
         align-self: flex-end;
     }
+
     .text-wrap-left-property {
         inline-size: 80%;
         overflow-wrap: break-word;
     }
+
     .video-text {
         padding-right: 2em;
         padding-left: 2em;

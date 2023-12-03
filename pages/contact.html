@@ -13,6 +13,7 @@
 
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main_content.css" />
     <link rel="stylesheet" href="../css/contact.css" />
 
     <title>Rahib Uzair Ahmed</title>
@@ -33,7 +34,8 @@
                             </div>
                         </a>
                         <a href="./contact.html">
-                            <div class="circle-menu-style nav-circle-3"><i class="nav-circle-style far fa-address-book"></i>
+                            <div class="circle-menu-style nav-circle-3"><i
+                                    class="nav-circle-style far fa-address-book"></i>
                             </div>
                         </a>
                         <a href="./about.html">
@@ -47,16 +49,18 @@
                     </div>
                 </div>
 
-                <div class="hero-text">
+                <div class="hero-text-other-pages">
                     <div class="name-style">CONTACT ME</div>
-                    <div class="small-description">"Let's get in touch and create something awesome together."</div>
+                    <div class="small-description-other-pages">"Let's get in touch and create something awesome
+                        together."</div>
                     <div id="form-desktop" class="desktop-form"></div>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <form id="form-mobile" class="contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvojjngk" method="post">
+        <form id="form-mobile" class="contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvojjngk"
+            method="post">
             <label class="label-field"><span>Name</span></label>
             <input class="input-style" type="text" name="name" id="name" />
             <label class="label-field"><span>Email</span></label>
@@ -84,15 +88,15 @@
                 const hidingPromises = navCircles.forEach(circle => {
                     return new Promise((resolve, reject) => {
                         circle.style.animation = 'circle-hide-animation 1s ease-in-out forwards';
-                        
+
                         // Using 'animationend' event to resolve the promise when the animation ends
                         circle.addEventListener('animationend', () => {
-                        resolve(circle);
-                    }, { once: true }); // Adding the event listener to fire only once
+                            resolve(circle);
+                        }, { once: true }); // Adding the event listener to fire only once
                     }).then(circle => {
                         circle.style.display = 'none';
                     });
-                    });
+                });
                 // set state to false
                 isMenuVisible = false;
             } else {
