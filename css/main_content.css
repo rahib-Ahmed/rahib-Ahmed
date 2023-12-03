@@ -36,7 +36,7 @@
 
 .scroll-to-next {
     position: absolute;
-    bottom: 20px;
+    bottom: -10px;
     right: calc(50% - 1rem);
     cursor: pointer;
     font-size: 2rem;
@@ -567,6 +567,7 @@
     }
 
     .chain-1 {
+        display: none;
         right: 15%;
         height: 6.2em;
         width: 2.5em;
