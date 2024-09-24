@@ -7,7 +7,7 @@
 - 🌱 Currently diving into **TensorFlow.js** to explore the exciting world of machine learning!
 
 - 💻 At **SLiDE**, I have:
-  - Designed a rendering engine for React-based forms, reducing development time by **35%** 🚀.
+  - Designed a rendering engine for React-based forms, reducing development time by **35%** 🚀 [Render Chan](https://www.npmjs.com/package/render-chan).
   - Optimized APIs to fetch data **30x faster**, significantly enhancing performance ⚡.
   - Led the transition from Django templates to a modern React frontend, improving usability and scalability 🛠️.
 
