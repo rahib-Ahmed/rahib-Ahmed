@@ -18,7 +18,7 @@
   - **UI/UX Design** 🎨
   - And my favorite subject: **Cats!** 🐱
 
-- 📫 Reach out to me at **[rahid.sam2@gmail.com](mailto:rahibsam2@gmail.com)** or connect with me on [LinkedIn]([https://www.linkedin.com/in/your-linkedin](https://www.linkedin.com/in/rahib-ahmed-1a13521a1/)).
+- 📫 Reach out to me at **[rahibsam2@gmail.com](mailto:rahibsam2@gmail.com)** or connect with me on [LinkedIn]([https://www.linkedin.com/in/your-linkedin](https://www.linkedin.com/in/rahib-ahmed-1a13521a1/)).
 
 ---
 
