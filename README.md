@@ -1,9 +1,25 @@
-<h1 align="center">Hi 👋, I'm Rahib Uzair Ahmed</h1>
+<h1 align="center">Hello 👋, I'm Rahib Uzair Ahmed</h1>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=rahib-ahmed&label=Profile%20views&color=255db6&style=flat" alt="rahib-ahmed" /> </p>
+---
 
-- 🌱 I’m currently learning **TensorFlow Js**
+🌟 **Full Stack Developer** passionate about crafting innovative solutions and enhancing user experiences in fintech and beyond.
 
-- 💬 Ask me about **react Js, UI/UX designs, cats :)**
+- 🌱 Currently diving into **TensorFlow.js** to explore the exciting world of machine learning!
 
-- 📫 How to reach me **ahmed.rahib2021@gmail.com**
+- 💻 At **SLiDE**, I have:
+  - Designed a rendering engine for React-based forms, reducing development time by **35%** 🚀.
+  - Optimized APIs to fetch data **30x faster**, significantly enhancing performance ⚡.
+  - Led the transition from Django templates to a modern React frontend, improving usability and scalability 🛠️.
+
+- 💡 Currently revolutionizing **money management** in fintech by integrating large language models (LLMs) with user anonymization techniques, empowering users while ensuring their privacy 🔒.
+
+- 💬 Let’s chat about:
+  - **React.js** 📚
+  - **UI/UX Design** 🎨
+  - And my favorite subject: **Cats!** 🐱
+
+- 📫 Reach out to me at **[rahid.sam2@gmail.com](mailto:rahibsam2@gmail.com)** or connect with me on [LinkedIn]([https://www.linkedin.com/in/your-linkedin](https://www.linkedin.com/in/rahib-ahmed-1a13521a1/)).
+
+---
+
+🌈 Let's collaborate and build something amazing together!
